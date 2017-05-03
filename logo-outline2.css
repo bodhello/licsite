@@ -1,0 +1,170 @@
+body {
+	background-color: #fff7ea;
+}
+
+/*.aa {
+  max-width: 80%;
+  width: 50%;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  fill: none;
+  stroke: #e09b5a; 
+  stroke-width:3px;
+  stroke-dasharray: 2419px;
+  stroke-dashoffset: 2419px;
+  animation-name: draw;
+  animation-duration: 3s;
+  animation-fill-mode: forwards; 
+  animation-iteration-count: 1; 
+  animation-timing-function: linear;
+  filter: url(#filter);
+  }*/
+
+  text {
+  	font-size: 24px;
+  	font-family: Avenir Next, sans-serif;
+  	font-weight: bold;
+  	display: none;
+  }
+
+  path {
+  	stroke-width:3px;
+  	stroke-dasharray: 2419px;
+  	stroke-dashoffset: 2419px;
+  	animation-name: draw;
+  	animation-duration: 2s;
+  	animation-fill-mode: forwards; 
+  	animation-iteration-count: 1; 
+  	animation-timing-function: linear;
+  	filter: url(#filter);
+  }
+
+  path:hover {
+  	cursor: hand;
+  }
+
+  .big {
+  	max-width: 80%;
+  	/*position: absolute;
+  	transform-origin: 0px 0px 0px 400px;*/
+  }
+
+  .big:hover {
+  	background: url(LIC-logo-outline.png) bottom center no-repeat;
+  	background-size: contain;
+  	transition:all 0.5s;
+  }
+
+  .border{
+  	animation-duration: 2s;
+  	stroke-width: 6px;
+  }
+
+  .inner{
+  	animation-delay: 2s;
+  	animation-duration: 2s;
+  }
+
+  .a{
+  	fill: transparent;
+  	stroke:#d76b92;
+  	transition:all 0.2s;
+  }
+
+  .a:hover{
+  	transform: scale(1.01);
+  	transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+
+  }
+
+  .a.border{
+  	stroke-dasharray: 2586px;
+  	stroke-dashoffset: 2586px;
+  }
+
+  .a.inner{
+  	stroke-dasharray: 6719px;
+  	stroke-dashoffset: 6719px;
+  }
+
+  .b{  
+  	fill: none;
+  	stroke:#b278b5;
+  }
+
+  .b.border{
+  	stroke-dasharray: 2178px;
+  	stroke-dashoffset: 2178px;
+  }
+
+  .b.inner{
+  	stroke-dasharray: 3100px;
+  	stroke-dashoffset: 3100px;
+  }
+
+  .c{
+  	fill: none;
+  	stroke:#3ea4de;
+  }
+
+  .c.border{
+  	stroke-dasharray: 2703px;
+  	stroke-dashoffset: 2703px;
+  }
+
+  .c.inner{
+  	stroke-dasharray: 411px;
+  	stroke-dashoffset: 411px;
+  	animation-duration: 1s;
+  }
+
+  .d{
+  	fill: none;
+  	stroke:#02bea9;
+  }
+
+  .d.border{
+  	stroke-dasharray: 2467px;
+  	stroke-dashoffset: 2467px;
+
+  }
+  .d.inner{
+  	stroke-dasharray: 8014px;
+  	stroke-dashoffset: 8014px;
+  }
+
+  .e{
+  	fill: none;
+  	stroke:#f08738;
+  }
+
+  .e.border {
+  	stroke-dasharray: 2872px;
+  	stroke-dashoffset: 2872px;
+  }
+
+  .e.inner {
+  	stroke-dasharray: 161px;
+  	stroke-dashoffset: 161px;
+  	animation-duration: 1s;
+  }
+
+  .txt {
+  	display: none;
+  }
+
+  @keyframes draw {
+  	to {
+  		stroke-dashoffset: 0;
+  	}
+  }
+
+  @keyframes show {
+  	to {
+  		opacity: 1;
+  	}
+  }

@@ -1,0 +1,57 @@
+.cls-1 {
+  max-width: 80%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  fill: none;
+  stroke: #e09b5a; 
+  stroke-width:3px;
+  stroke-dasharray: 2419px;
+  stroke-dashoffset: 2419px;
+  animation-name: draw;
+  animation-duration: 3s;
+  animation-fill-mode: forwards; 
+  animation-iteration-count: 1; 
+  animation-timing-function: linear;
+  filter: url(#filter);
+}
+
+#logo{
+  max-width: 80%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+  position: absolute;
+  animation-name: show;
+  animation-delay:5s;
+  animation-duration:1s;
+  animation-fill-mode:forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+#logo:hover{
+
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}
