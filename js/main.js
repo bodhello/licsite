@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	
 	let color = false;
-	let bg = ['bluebg.png', 'greenbg.png', 'pinkbg.png', 'purplebg.png', 'redbg.png', 'yellowbg.png'];
+	let bg = ['img/bluebg.png', 'img/greenbg.png', 'img/pinkbg.png', 'img/purplebg.png', 'img/redbg.png', 'img/yellowbg.png'];
 	let index = 0;
 
 	let colorTransition = function() {
@@ -15,12 +15,20 @@ $(document).ready(function(){
 
 	let bgTransition = function(){
 		index++;
-		$('body').css('background-image', 'url(img/' + bg[index % 6] + ')');
+		$('body').css('background-image', 'url(' + bg[index % 6] + ')');
 		console.log(bg[index % 6]);
 	}
 	
 	$('.logo').mouseover(colorTransition);
 	$('.logo').mouseout(colorTransition);
 	window.setInterval(bgTransition, 2000);
+
+	$.fn.preload = function() {
+    	this.each(function(){
+        	$('<img/>')[0].src = this;
+    	});
+	}
+
+	$(bg).preload();
 
 });
