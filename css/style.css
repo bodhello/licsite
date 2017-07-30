@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt');
+
+body {
+	transition: background-image .25s ease-in-out;
+	background-image: url('../img/bluebg.png');
+}
+
+.title {
+	font-family: Rock Salt, sans serif;
+	font-weight: bold;
+	margin-left: auto;
+   margin-right: auto;
+   width: 50em;
+}
+
+.logo {
+	display:block;
+	transition: filter .25s ease-in-out;
+	width: 50em;
+   filter: grayscale(100%);
+   margin-left: auto;
+   margin-right: auto;
+}
