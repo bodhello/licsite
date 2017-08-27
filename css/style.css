@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Rock+Salt');
 
 body {
+	-webkit-transition: background-image .25s;
 	transition: background-image .25s ease-in-out;
 	background-image: url('../img/bluebg.png');
 }
@@ -15,6 +16,7 @@ body {
 
 .logo {
 	display:block;
+	-webkit-transition: filter .25s ease-in-out;
 	transition: filter .25s ease-in-out;
 	width: 50em;
    filter: grayscale(100%);

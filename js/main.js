@@ -1,9 +1,12 @@
 $(document).ready(function(){
 	
+	// Global variable defns
 	let color = false;
 	let bg = ['img/bluebg.png', 'img/greenbg.png', 'img/pinkbg.png', 'img/purplebg.png', 'img/redbg.png', 'img/yellowbg.png'];
 	let index = 0;
+	let bgChange = true;
 
+	// Fn defns
 	let colorTransition = function() {
 		if (!color){
 			$('.logo').css('filter', 'none');
@@ -14,14 +17,16 @@ $(document).ready(function(){
 	};
 
 	let bgTransition = function(){
-		index++;
-		$('body').css('background-image', 'url(' + bg[index % 6] + ')');
-		console.log(bg[index % 6]);
+		if (!bgChange){
+			return;
+		}
+		$('body').css('background-image', 'url(' + bg[index++ % 6] + ')');
 	}
-	
-	$('.logo').mouseover(colorTransition);
-	$('.logo').mouseout(colorTransition);
-	window.setInterval(bgTransition, 2000);
+
+	let bgStop = function(){
+		bgChange = !bgChange;
+		console.log(bgChange);
+	}
 
 	$.fn.preload = function() {
     	this.each(function(){
@@ -30,5 +35,9 @@ $(document).ready(function(){
 	}
 
 	$(bg).preload();
+	$('.logo').mouseover(colorTransition);
+	$('.logo').mouseout(colorTransition);
+	window.setInterval(bgTransition, 2000);
+	$('.stop').click(bgStop);
 
 });
